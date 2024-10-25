@@ -219,6 +219,7 @@ body {
   .main__one-bottom-btn {
     position: relative;
     z-index: 1;
+    font-size: 1.6rem;
   }
   .main__one-bottom-btn::before {
     position: absolute;
