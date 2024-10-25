@@ -15,10 +15,13 @@
 	<body>
 		<main class="main">
 			<div class="main__one">
-				<img
-					src="./src/images/illustration-sign-up-mobile.svg"
-					alt="Window and monitor on red background"
-					class="main__one-img" />
+				<picture>
+<source srcset="./src/images/illustration-sign-up-desktop.svg" class="main__one-img" media="(min-width: 992px)">
+					<img
+						src="./src/images/illustration-sign-up-mobile.svg"
+						alt="Window and monitor on red background"
+						class="main__one-img" />
+				</picture>
 				<div class="main__one-bottom">
 					<h1 class="main__one-bottom-title">Stay updated!</h1>
 					<p class="main__one-bottom-text">Join 60,000+ product managers receiving monthly updates on:</p>
@@ -52,7 +55,6 @@
 						A confirmation email has been sent to <span>ash@loremcompany.com</span>. Please open it and click the button
 						inside to confirm your subscription.
 					</p>
-
 				</div>
 
 				<button class="main__one-bottom-btn dissmis-btn">Dismiss message</button>

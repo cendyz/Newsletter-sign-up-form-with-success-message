@@ -9,7 +9,6 @@ const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
 
 const checkEmail = () => {
 	if (emailRegex.test(emailInput.value) && emailInput.value !== "") {
-		emailInput.style.border = "1px solid hsl(231, 7%, 60%)";
 		errorText.style.visibility = "hidden";
 		emailInput.classList.remove("red-placeholder");
 		thanksEmail.textContent = emailInput.value;
@@ -17,14 +16,13 @@ const checkEmail = () => {
 		mainTwo.style.display = "flex";
 		emailInput.value = "";
 	} else {
-		emailInput.style.border = "1px solid hsl(4, 100%, 67%)";
 		errorText.style.visibility = "visible";
 		emailInput.classList.add("red-placeholder");
 	}
 };
 
 const submit = () => {
-	mainOne.style.display = "block";
+	mainOne.style.display = "flex";
 	mainTwo.style.display = "none";
 };
 

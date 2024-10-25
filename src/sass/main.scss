@@ -1,7 +1,7 @@
 @use "./utilities/index" as *;
 
 :root {
-	--tomato: hsl(4, 100%, 67%);
+	--tomato: rgb(255, 98, 87);
 	--dark-slate-grey: hsl(234, 29%, 20%);
 	--charcoal-grey: hsl(235, 18%, 26%);
 	--grey: hsl(231, 7%, 60%);
@@ -11,17 +11,20 @@
 body {
 	display: flex;
 	justify-content: center;
+	align-items: center;
 	font-size: 16px;
 	font-family: "Roboto", sans-serif;
-	background-color: var(--green-200);
+	background-color: var(--dark-slate-grey);
 }
 
 .main {
-	height: 100vh;
+	max-height: 48.125em;
 	width: 100%;
 	max-width: 23.438em;
+	background-color: var(--white);
 
 	&__one {
+		flex-direction: column;
 		&-bottom {
 			padding: 1.7em;
 
@@ -83,6 +86,7 @@ body {
 
 	&__two {
 		height: 100vh;
+		max-height: 48.125em;
 		padding: 1.5em;
 		@include flex;
 		display: none;
@@ -114,8 +118,77 @@ body {
 }
 
 .red-placeholder {
+	border: 1px solid hsl(4, 100%, 67%);
+	background-color: rgba(255, 98, 87, 0.1);
+
 	&::placeholder {
 		color: var(--tomato);
+	}
+}
+
+@media (min-width: 992px) {
+	body {
+		display: flex;
+		justify-content: center;
+		// ac
+	}
+
+	.main {
+		padding: 1.5em;
+		max-width: fit-content;
+		max-height: fit-content;
+		border-radius: 1em;
+
+		&__one {
+			display: flex;
+			flex-direction: row;
+
+			picture {
+				order: 1;
+			}
+			&-bottom {
+				max-width: 30em;
+				padding: 1.5em;
+				padding-right: 3em;
+				// margin-right: 1em;
+				order: 0;
+				display: flex;
+				justify-content: center;
+				flex-direction: column;
+
+				&-title {
+					margin-bottom: 0.1em;
+					font-size: 6rem;
+				}
+
+				&-text {
+					// margin-right: 4em;
+					font-size: 1.7rem;
+					line-height: 1.5;
+				}
+
+				&-info {
+					margin-top: 0.5em;
+					margin-bottom: 1.5em;
+					&-item {
+						margin: 0.2em;
+					}
+				}
+
+				&-input,
+				&-btn {
+					padding: 1.3em;
+				}
+
+				&-btn {
+					transition: background-color 0.2s;
+
+					&:hover {
+						background-color: var(--charcoal-grey);
+					}
+				}
+			}
+		}
 	}
 }
 
