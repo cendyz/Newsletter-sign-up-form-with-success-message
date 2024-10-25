@@ -1,0 +1,126 @@
+@use "./utilities/index" as *;
+
+:root {
+	--tomato: hsl(4, 100%, 67%);
+	--dark-slate-grey: hsl(234, 29%, 20%);
+	--charcoal-grey: hsl(235, 18%, 26%);
+	--grey: hsl(231, 7%, 60%);
+	--white: hsl(0, 0%, 100%);
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	font-size: 16px;
+	font-family: "Roboto", sans-serif;
+	background-color: var(--green-200);
+}
+
+.main {
+	height: 100vh;
+	width: 100%;
+	max-width: 23.438em;
+
+	&__one {
+		&-bottom {
+			padding: 1.7em;
+
+			&-title {
+				margin-bottom: 0.7em;
+			}
+
+			&-text {
+				margin: 0.8em 0;
+			}
+
+			&-info {
+				margin-top: 2em;
+				list-style: none;
+
+				&-item {
+					display: flex;
+					margin-bottom: 1em;
+
+					&-img {
+						margin: 0 1em 1em 0em;
+					}
+				}
+			}
+
+			&-box {
+				display: flex;
+				font-size: 1.3rem;
+				justify-content: space-between;
+				&-label {
+					font-weight: 700;
+					color: var(--dark-slate-grey);
+				}
+
+				&-error {
+					color: var(--tomato);
+					font-style: italic;
+					visibility: hidden;
+				}
+			}
+
+			&-input {
+				margin-top: 0.7em;
+				margin-bottom: 1.3em;
+				display: block;
+				padding: 1em;
+				@include width-border;
+				border: 1px solid var(--grey);
+			}
+
+			&-btn {
+				padding: 1.2em;
+				@include width-border;
+				background-color: var(--dark-slate-grey);
+				color: var(--white);
+			}
+		}
+	}
+
+	&__two {
+		height: 100vh;
+		padding: 1.5em;
+		@include flex;
+		display: none;
+
+		&-content {
+			@include flex;
+			flex-grow: 1;
+		}
+
+		&-img {
+			width: 17%;
+		}
+		&-title {
+			font-size: 3.5rem;
+			font-weight: 700;
+			color: var(--dark-slate-grey);
+		}
+		&-text {
+			line-height: 1.5;
+			span {
+				font-weight: 700;
+			}
+		}
+
+		.main__one-bottom-btn {
+			margin-top: auto;
+		}
+	}
+}
+
+.red-placeholder {
+	&::placeholder {
+		color: var(--tomato);
+	}
+}
+
+// - Mobile: 375px
+// - Desktop: 1440px
+
+// - Family: [Roboto](https://fonts.google.com/specimen/Roboto)
+// - Weights: 400, 700

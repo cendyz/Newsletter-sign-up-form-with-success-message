@@ -1,0 +1,11 @@
+@mixin width-border {
+	width: 100%;
+	border-radius: 0.5em;
+}
+
+@mixin flex {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	row-gap: 1.5em;
+}

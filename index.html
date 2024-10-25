@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Page</title>
+		<link rel="icon" type="image/x-icon" href="./src/images/favicon-32x32.png" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+			rel="stylesheet" />
+		<link rel="stylesheet" href="./dist/css/main.css" />
+	</head>
+	<body>
+		<main class="main">
+			<div class="main__one">
+				<img
+					src="./src/images/illustration-sign-up-mobile.svg"
+					alt="Window and monitor on red background"
+					class="main__one-img" />
+				<div class="main__one-bottom">
+					<h1 class="main__one-bottom-title">Stay updated!</h1>
+					<p class="main__one-bottom-text">Join 60,000+ product managers receiving monthly updates on:</p>
+					<ul class="main__one-bottom-info">
+						<li class="main__one-bottom-info-item">
+							<img src="./src/images/icon-list.svg" alt="Confirm icon" class="main__one-bottom-info-item-img" /> Product
+							discovery and building what matters
+						</li>
+						<li class="main__one-bottom-info-item">
+							<img src="./src/images/icon-list.svg" alt="Confirm icon" class="main__one-bottom-info-item-img" />
+							Measuring to ensure updates are a success
+						</li>
+						<li class="main__one-bottom-info-item">
+							<img src="./src/images/icon-list.svg" alt="Confirm icon" class="main__one-bottom-info-item-img" /> And
+							much more!
+						</li>
+					</ul>
+					<div class="main__one-bottom-box">
+						<label for="email" class="main__one-bottom-box-label">Email address</label>
+						<p class="main__one-bottom-box-error">Valid email required</p>
+					</div>
+					<input type="email" class="main__one-bottom-input" id="email" placeholder="email@company.com" />
+					<button class="main__one-bottom-btn">Subscribe to monthly newsletter</button>
+				</div>
+			</div>
+			<div class="main__two">
+				<div class="main__two-content">
+					<img src="./src/images/icon-list.svg" alt="Confirm icon" class="main__two-img" />
+					<p class="main__two-title">Thanks for subscribing!</p>
+					<p class="main__two-text">
+						A confirmation email has been sent to <span>ash@loremcompany.com</span>. Please open it and click the button
+						inside to confirm your subscription.
+					</p>
+
+				</div>
+
+				<button class="main__one-bottom-btn dissmis-btn">Dismiss message</button>
+			</div>
+		</main>
+
+		<script defer src="./src/main.js"></script>
+	</body>
+</html>
