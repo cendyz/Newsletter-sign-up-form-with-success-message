@@ -1,7 +1,7 @@
 @use "./utilities/index" as *;
 
 :root {
-	--tomato: rgb(255, 98, 87);
+	--tomato: #ff6257;
 	--dark-slate-grey: hsl(234, 29%, 20%);
 	--charcoal-grey: hsl(235, 18%, 26%);
 	--grey: hsl(231, 7%, 60%);
@@ -94,20 +94,19 @@ body {
 		&-content {
 			@include flex;
 			flex-grow: 1;
-		}
-
-		&-img {
-			width: 17%;
-		}
-		&-title {
-			font-size: 3.5rem;
-			font-weight: 700;
-			color: var(--dark-slate-grey);
-		}
-		&-text {
-			line-height: 1.5;
-			span {
+			&-img {
+				width: 17%;
+			}
+			&-title {
+				font-size: 3.5rem;
 				font-weight: 700;
+				color: var(--dark-slate-grey);
+			}
+			&-text {
+				line-height: 1.5;
+				span {
+					font-weight: 700;
+				}
 			}
 		}
 
@@ -118,7 +117,7 @@ body {
 }
 
 .red-placeholder {
-	border: 1px solid hsl(4, 100%, 67%);
+	border: 1px solid #ff6257;
 	background-color: rgba(255, 98, 87, 0.1);
 
 	&::placeholder {
@@ -130,7 +129,6 @@ body {
 	body {
 		display: flex;
 		justify-content: center;
-		// ac
 	}
 
 	.main {
@@ -150,7 +148,7 @@ body {
 				max-width: 30em;
 				padding: 1.5em;
 				padding-right: 3em;
-				// margin-right: 1em;
+
 				order: 0;
 				display: flex;
 				justify-content: center;
@@ -162,7 +160,6 @@ body {
 				}
 
 				&-text {
-					// margin-right: 4em;
 					font-size: 1.7rem;
 					line-height: 1.5;
 				}
@@ -181,19 +178,45 @@ body {
 				}
 
 				&-btn {
-					transition: background-color 0.2s;
+					position: relative;
+					z-index: 1;
+
+					&::before {
+						position: absolute;
+						content: "";
+						top: 0;
+						right: 0;
+						bottom: 0;
+						left: 0;
+						background-image: linear-gradient(35deg, rgba(255, 98, 87, 1) 25%, rgba(249, 46, 31, 1) 100%);
+						z-index: -1;
+						border-radius: 0.5em;
+						opacity: 0;
+						transition: opacity 0.2s linear;
+					}
 
 					&:hover {
-						background-color: var(--charcoal-grey);
+						&::before {
+							opacity: 1;
+						}
 					}
+				}
+			}
+		}
+
+		&__two {
+			height: 100%;
+			max-width: 26em;
+			max-height: fit-content;
+			display: flex;
+			display: none;
+
+			&-content {
+				margin-bottom: 1.1em;
+				&-title {
+					font-size: 5.5rem;
 				}
 			}
 		}
 	}
 }
-
-// - Mobile: 375px
-// - Desktop: 1440px
-
-// - Family: [Roboto](https://fonts.google.com/specimen/Roboto)
-// - Weights: 400, 700

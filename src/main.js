@@ -3,7 +3,7 @@ const mainTwo = document.querySelector(".main__two");
 const errorText = document.querySelector(".main__one-bottom-box-error");
 const btn = document.querySelector(".main__one-bottom-btn");
 const dismissBtn = document.querySelector(".dissmis-btn");
-const thanksEmail = document.querySelector(".main__two-text span");
+const thanksEmail = document.querySelector(".main__two-content-text span");
 const emailInput = document.querySelector("#email");
 const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
 
